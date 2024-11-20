@@ -20,10 +20,10 @@ const RestaurantHeader = () => {
       <div className="absolute w-[97%] rounded-3xl h-auto bg-white p-[24px]">
         <div className="flex items-center gap-x-2">
           <MdStarHalf color="green" size={26} />
-          <p className=" font-bold text-[24px] text-black">3.9</p>
+          <p className=" font-bold text-[14px] xl:text-[24px] text-black">3.9</p>
         </div>
-        <p className="text-[20px] text-red-700 mt-[16px]">pizzas, Italian</p>
-        <p className="text-[16px] text-black font-medium mt-[16px]">
+        <p className="text-[14px] xl:text-[20px] text-red-700 mt-[16px]">pizzas, Italian</p>
+        <p className="text-[14px] xl:text-[16px] text-black font-medium mt-[16px]">
           Gunadala, Vijayawada AndhraPradesh India
         </p>
       </div>

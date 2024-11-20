@@ -17,27 +17,27 @@ const FoodItems = () => {
             return (
               <div
                 key={item.id}
-                className="w-full flex h-auto border-b-4 border-slate-400 mt-[26px]"
+                className="w-full flex flex-col xl:flex-row h-auto border-b-4 border-slate-400 mt-[26px]"
               >
-                <div className="w-3/4 mb-[12px]">
-                  <p className="font-bold text-black text-[20px]">
+                <div className="w-full xl:w-3/4 mb-[12px]">
+                  <p className="font-bold text-black text-[16px] xl:text-[20px]">
                     {item.title}
                   </p>
-                  <div className="flex items-center gap-x-2 mt-[16px]">
+                  <div className="flex justify-start items-center gap-x-2 mt-[16px]">
                     <LuIndianRupee size={20} />
-                    <p className="text-black font-bold text-[18px]">
+                    <p className="text-black font-bold text-[16px] xl:text-[18px]">
                       {item.price}
                     </p>
                   </div>
-                  <div className="flex items-center gap-x-2 mt-[12px]">
+                  <div className="flex justify-start items-center gap-x-2 mt-[12px]">
                     <FaStar size={20} color="green" />
-                    <p className="text-green-800 text-[18px]">{item.rating}</p>
+                    <p className="text-green-800 text-[16px] xl:text-[18px]">{item.rating}</p>
                   </div>
-                  <p className="text-[#02060c99] text-[16px] font-semibold mt-[18px]">
+                  <p className="text-[#02060c99] text-[14px] xl:text-[16px] font-semibold mt-[18px]">
                     {item.description}
                   </p>
                 </div>
-                <div className="w-1/4 mb-[22px]">
+                <div className="w-full xl:w-1/4 mb-[22px]">
                   <div className="flex justify-center">
                     <Image
                       className="rounded-xl"

@@ -54,21 +54,21 @@ const NavBar = () => {
   return (
     <>
       <div
-        className="flex  justify-between items-center w-full h-[72px] p-4 bg-white"
+        className="flex justify-between items-center w-full h-[72px] p-4 bg-white"
         style={{ boxShadow: "0 15px 40px -20px rgba(40,44,63,.15)" }}
       >
-        <p className="text-[32px] text-black">Food Order Restaurant</p>
+        <p className="text-[12px] xl:text-[32px] text-black">Food Order Restaurant</p>
         <button
-          className="bg-black text-white rounded-md text-[18px] p-2 "
+          className="bg-black text-white rounded-sm xl:rounded-md text-[12px] xl:text-[18px] p-2 "
           onClick={OpenModal}
         >
           Add to Cart
         </button>
 
         {modalVisible && (
-          <div className="w-screen h-screen  fixed top-0 left-0 z-[10]">
+          <div className="w-screen h-screen overflow-auto fixed top-0 left-0 z-[10]">
             <div className="w-screen h-screen absolute top-0 left-0 opacity-80 bg-black"></div>
-            <div className="flex flex-col top-[50px] lg:overflow-auto items-center lg:flex-row lg:items-center w-[60%] leading-6 bg-[#f0f0f5]  p-[34px] rounded-xl h-auto mx-auto relative">
+            <div className="flex flex-col top-[50px] xl:overflow-auto items-center xl:flex-row xl:items-center w-full xl:w-[60%] leading-6 bg-[#f0f0f5]  p-[34px] rounded-xl h-auto mx-auto relative">
               <div className="w-full h-[550px] overflow-y-scroll">
                 {finalOrderData.orderDetails.length > 0 &&
                   finalOrderData.orderDetails.map(
@@ -76,7 +76,7 @@ const NavBar = () => {
                       return (
                         <div key={idx}>
                           <div className="flex items-center justify-between">
-                            <p className="text-black text-[26px]  mt-[24px] font-medium">
+                            <p className="text-black text-[18px] xl:text-[26px]  mt-[24px] font-medium">
                               {fooditem.title}
                             </p>
                           </div>
@@ -85,20 +85,20 @@ const NavBar = () => {
                               <div className="flex items-center gap-x-2 mb-[24px] ">
                                 <div className="flex items-center">
                                   <LuIndianRupee size={20} />
-                                  <p className="text-black font-bold text-[26px]">
+                                  <p className="text-black font-bold text-[18px] lg:text-[26px]">
                                     {fooditem.price}
                                   </p>
                                 </div>
                                 <div className="flex items-center ms-[24px] border-2 p-[1px] border-slate-400">
                                   <IoClose size={20} />
-                                  <p className="text-black font-bold text-[18px]">
+                                  <p className="text-black font-bold text-[14px] xl:text-[18px]">
                                     {fooditem.quantity}
                                   </p>
                                 </div>
                               </div>
                               <div className="flex items-center mb-[24px]">
                                 <LuIndianRupee size={20} />
-                                <p className="text-[24px] font-bold text-black">
+                                <p className="text-[18px] xl:text-[24px] font-bold text-black">
                                   {fooditem.amount}
                                 </p>
                               </div>
@@ -110,7 +110,7 @@ const NavBar = () => {
                   )}
                 <div className="w-full h-auto mt-[32px] p-6 bg-white rounded-2xl">
                   <div className="flex items-center justify-between">
-                    <p className="text-[24px] text-black">Total amount:</p>
+                    <p className="text-[18px] xl:text-[24px] text-black">Total amount:</p>
                     <div className="flex items-center">
                       <LuIndianRupee size={20} />
                       <p className="text-[24px] text-black">
@@ -120,34 +120,34 @@ const NavBar = () => {
                     </div>
                   </div>
                   <div className="flex items-center mt-[12px] justify-between">
-                    <p className="text-[24px] text-black mt-[8px]">GST:</p>
+                    <p className="text-[18px] xl:text-[24px] text-black mt-[8px]">GST:</p>
                     <div className="flex items-center">
                       <LuIndianRupee size={20} />
-                      <p className="text-[24px] text-black">
+                      <p className="text-[18px] xl:text-[24px] text-black">
                         {" "}
                         {finalOrderData.gst}
                       </p>
                     </div>
                   </div>
                   <div className="flex items-center justify-between mt-[8px]">
-                    <p className="text-[24px] text-black mt-[12px]">
+                    <p className="text-[18px] xl:text-[24px] text-black mt-[12px]">
                       Delivery Charge:
                     </p>
                     <div className="flex items-center">
                       <LuIndianRupee size={20} />
-                      <p className="text-[24px] text-black">
+                      <p className="text-[18px] xl:text-[24px] text-black">
                         {" "}
                         {finalOrderData.deliveryFee}
                       </p>
                     </div>
                   </div>
                   <div className="flex items-center justify-between mt-[8px]">
-                    <p className="text-[24px] text-black mt-[12px]">
+                    <p className="text-[18px] xl:text-[24px] text-black mt-[12px]">
                       Final Amount:
                     </p>
                     <div className="flex items-center">
                       <LuIndianRupee size={20} />
-                      <p className="text-[24px] text-black">
+                      <p className="text-[18px] xl:text-[24px] text-black">
                         {finalOrderData.orderPrice +
                           finalOrderData.gst +
                           finalOrderData.deliveryFee}
@@ -161,13 +161,13 @@ const NavBar = () => {
                 >
                   <button
                     onClick={() => closeModal()}
-                    className="bg-red-400  rounded-md text-[24px]  p-3 text-white"
+                    className="bg-red-400  rounded-md text-[18px] xl:text-[24px]  p-3 text-white"
                   >
                     Close
                   </button>
                   <button
                     onClick={() => {}}
-                    className="bg-green-400  rounded-md text-[24px]  p-3 text-white"
+                    className="bg-green-400  rounded-md text-[18px] xl:text-[24px]  p-3 text-white"
                   >
                     Order
                   </button>
