@@ -17,7 +17,7 @@ const FoodItems = () => {
             return (
               <div
                 key={item.id}
-                className="w-full flex flex-col xl:flex-row h-auto border-b-4 border-slate-400 mt-[26px]"
+                className="w-full flex flex-col-reverse xl:flex-row h-auto border-b-4 border-slate-400 mt-[26px]"
               >
                 <div className="w-full xl:w-3/4 mb-[12px]">
                   <p className="font-bold text-black text-[16px] xl:text-[20px]">

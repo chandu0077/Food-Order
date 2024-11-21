@@ -57,9 +57,9 @@ const NavBar = () => {
         className="flex justify-between items-center w-full h-[72px] p-4 bg-white"
         style={{ boxShadow: "0 15px 40px -20px rgba(40,44,63,.15)" }}
       >
-        <p className="text-[12px] xl:text-[32px] text-black">Food Order Restaurant</p>
+        <p className="text-[16px] xl:text-[32px] text-black">Food Order Restaurant</p>
         <button
-          className="bg-black text-white rounded-sm xl:rounded-md text-[12px] xl:text-[18px] p-2 "
+          className="bg-black text-white rounded-md xl:rounded-md text-[12px] xl:text-[18px] p-2 "
           onClick={OpenModal}
         >
           Add to Cart
