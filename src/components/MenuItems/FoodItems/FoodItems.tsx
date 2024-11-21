@@ -11,7 +11,7 @@ const FoodItems = () => {
 
   return (
     <>
-      <div className="w-full h-[550px] bg-white mt-[32px] rounded-xl p-6">
+      <div className="w-full h-auto bg-white mt-[32px] rounded-xl p-4">
         {foodCtx.availableFoodItems &&
           foodCtx.availableFoodItems.map((item: foodItem, idx) => {
             return (
@@ -24,7 +24,7 @@ const FoodItems = () => {
                     {item.title}
                   </p>
                   <div className="flex justify-start items-center gap-x-2 mt-[16px]">
-                    <LuIndianRupee size={20} />
+                    <LuIndianRupee size={18} />
                     <p className="text-black font-bold text-[16px] xl:text-[18px]">
                       {item.price}
                     </p>
